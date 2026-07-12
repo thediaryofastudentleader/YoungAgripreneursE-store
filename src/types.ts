@@ -74,12 +74,19 @@ export interface Order {
   payment_status: string;
 }
 
+export interface ProductRating {
+  productId: string;
+  productName: string;
+  rating: number;
+  wouldRecommend: boolean;
+}
+
 export interface Review {
   id: string;
   order_id: string;
-  product_id?: string;
-  rating: number;
-  comment: string;
+  product_ratings: ProductRating[];
+  delivery_rating: number;
+  recommend_score: number;
   created_at: string;
 }
 
@@ -92,3 +99,4 @@ export interface Notification {
   orderId?: string;
   created_at: string;
 }
+
