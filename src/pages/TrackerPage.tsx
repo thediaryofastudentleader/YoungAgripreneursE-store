@@ -21,7 +21,7 @@ export default function TrackerPage() {
   const app = useApp();
   const navigate = useNavigate();
 
-  // Fetch order + subscribe to realtime updates
+    // Fetch order + subscribe to realtime updates
   useEffect(() => {
     if (!orderId || !supabase || !app.user) {
       setLoading(false);
@@ -47,14 +47,22 @@ export default function TrackerPage() {
       .on(
         'postgres_changes',
         {
-          event: '*', // Listen to ALL changes (INSERT, UPDATE, DELETE)
+          event: 'UPDATE',
           schema: 'public',
           table: 'orders',
           filter: `order_id=eq.${orderId}`,
         },
         (payload) => {
-          // Update order when any change happens
-          setOrder(payload.new as unknown as Order);
+          const newOrder = payload.new as unknown as Order;
+          const oldStatus = order?.status;
+          const newStatus = newOrder.status;
+
+          // Show toast if status changed
+          if (oldStatus && oldStatus !== newStatus) {
+            app.showToast(`Order status updated: ${newStatus.replace(/_/g, ' ')}`, 'info');
+          }
+
+          setOrder(newOrder);
         }
       )
       .subscribe();
