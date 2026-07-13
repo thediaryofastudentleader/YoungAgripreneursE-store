@@ -11,7 +11,6 @@ import {
   ChevronLeft, CreditCard, ArrowRight
 } from 'lucide-react';
 
-// Chat auto-pops at these two moments in the delivery journey.
 const CHAT_POP_STATUSES = ['order_received', 'driver_nearby'];
 
 export default function TrackerPage() {
@@ -22,21 +21,48 @@ export default function TrackerPage() {
   const app = useApp();
   const navigate = useNavigate();
 
+  // Fetch order + subscribe to realtime updates
   useEffect(() => {
+    if (!orderId || !supabase || !app.user) {
+      setLoading(false);
+      return;
+    }
+
+    // Initial fetch
     const fetchOrder = async () => {
-      if (!orderId || !supabase || !app.user) { setLoading(false); return; }
       const { data } = await supabase
         .from('orders')
         .select('*')
         .eq('order_id', orderId)
-        .eq('user_id', app.user.id)
+        .eq('user_id', app.user!.id)
         .single();
       if (data) setOrder(data as unknown as Order);
       setLoading(false);
     };
     fetchOrder();
-    const interval = setInterval(fetchOrder, 8000);
-    return () => clearInterval(interval);
+
+    // Realtime subscription for live status updates
+    const channel = supabase
+      .channel(`order-tracker-${orderId}`)
+      .on(
+        'postgres_changes',
+        {
+          event: '*', // Listen to ALL changes (INSERT, UPDATE, DELETE)
+          schema: 'public',
+          table: 'orders',
+          filter: `order_id=eq.${orderId}`,
+        },
+        (payload) => {
+          // Update order when any change happens
+          setOrder(payload.new as unknown as Order);
+        }
+      )
+      .subscribe();
+
+    // Cleanup: unsubscribe when component unmounts
+    return () => {
+      supabase.removeChannel(channel);
+    };
   }, [orderId, app.user]);
 
   // Not logged in — no guest tracking allowed.
