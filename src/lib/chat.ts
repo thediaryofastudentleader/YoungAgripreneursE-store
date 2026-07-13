@@ -64,7 +64,10 @@ export function subscribeToMessages(orderId: string, onMessage: (msg: ChatMessag
     )
     .subscribe();
   return () => {
-    supabase.removeChannel(channel);
+    // FIX: supabase could be null here if module was tree-shaken oddly
+    if (supabase) {
+      supabase.removeChannel(channel);
+    }
   };
 }
 
