@@ -8,8 +8,8 @@ import { formatPrice } from '@/lib/utils';
 import type { ProductSpecial, Order, ChatMessage } from '@/types';
 import {
   Shield, LogOut, Package, TrendingUp, MessageSquare,
-  CheckCircle, XCircle, Clock, Search, ChevronLeft,
-  Percent, Trash2, Loader2, AlertTriangle, RefreshCw
+  CheckCircle, XCircle, Search, ChevronLeft,
+  Percent, Trash2, AlertTriangle, RefreshCw
 } from 'lucide-react';
 
 // Admin password is validated server-side via Supabase Edge Function
