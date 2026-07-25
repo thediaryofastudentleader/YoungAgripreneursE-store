@@ -193,7 +193,7 @@ export default function TrackerPage() {
               return (
                 <div key={step.id} className={`relative pb-8 last:pb-0 ${isCompleted ? 'opacity-100' : 'opacity-40'}`}>
                   <div className={`absolute left-[-25px] top-0.5 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
-                    isCompleted ? 'border-emerald-500 bg-emerald-500' : isCurrent ? 'border-emerald-500 bg-white dark:bg-slate-800' : app.dark ? 'border-slate-600 bg-slate-700' : 'border-slate-30[...]
+                    isCompleted ? 'border-emerald-500 bg-emerald-500' : isCurrent ? 'border-emerald-500 bg-white dark:bg-slate-800' : app.dark ? 'border-slate-600 bg-slate-700' : 'border-slate-300 bg-slate-200'
                   }`}>
                     {isCompleted && <CheckCircle size={14} className="text-white" />}
                   </div>
