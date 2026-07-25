@@ -30,7 +30,7 @@ export default function TrackerPage() {
 
     // Initial fetch
     const fetchOrder = async () => {
-      const { data } = await supabase
+      const { data } = await supabase!
         .from('orders')
         .select('*')
         .eq('order_id', orderId)
@@ -42,7 +42,7 @@ export default function TrackerPage() {
     fetchOrder();
 
     // Realtime subscription for live status updates
-    const channel = supabase
+    const channel = supabase!
       .channel(`order-tracker-${orderId}`)
       .on(
         'postgres_changes',
@@ -69,7 +69,7 @@ export default function TrackerPage() {
 
     // Cleanup: unsubscribe when component unmounts
     return () => {
-      supabase.removeChannel(channel);
+      supabase!.removeChannel(channel);
     };
   }, [orderId, app.user]);
 
@@ -193,7 +193,7 @@ export default function TrackerPage() {
               return (
                 <div key={step.id} className={`relative pb-8 last:pb-0 ${isCompleted ? 'opacity-100' : 'opacity-40'}`}>
                   <div className={`absolute left-[-25px] top-0.5 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all ${
-                    isCompleted ? 'border-emerald-500 bg-emerald-500' : isCurrent ? 'border-emerald-500 bg-white dark:bg-slate-800' : app.dark ? 'border-slate-600 bg-slate-700' : 'border-slate-300 bg-white'
+                    isCompleted ? 'border-emerald-500 bg-emerald-500' : isCurrent ? 'border-emerald-500 bg-white dark:bg-slate-800' : app.dark ? 'border-slate-600 bg-slate-700' : 'border-slate-30[...]
                   }`}>
                     {isCompleted && <CheckCircle size={14} className="text-white" />}
                   </div>
