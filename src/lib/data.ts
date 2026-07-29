@@ -30,7 +30,11 @@ export const categories: Category[] = [
 
 export const products: Product[] = [
   // Kitchen Appliances
-  { id: 'ka-1', title: 'Russell Hobbs Kettle', price: 349.99, originalPrice: 449.99, description: '1.7L cordless electric kettle with rapid boil', image: '/images/kettle.jpg', category: 'kitchen-appliances', stock: 15, trending: true, rating: 4.5, reviews: 28 },
+  { id: 'ka-1', title: 'Mellerware Kettle Cordless Glass Black 1.8L 2200W', price: 350.00, originalPrice: 399.00, description: 'Brand: Mellerware; Capacity: 1.8 L; Material: Glass; Color: Black; Special feature: Automatic Shut-Off; Package details: Kettle: 2200W; Capacity: 1,8 L; 360º swivel base
+202 Stainless steel hidden heating element with automatic shut-off
+Elevated Borosilicate Glass Body Material
+LED light lighting
+Overheating and boil-dry prevention', image: '/images/kettle.jpg', category: 'kitchen-appliances', stock: 15, trending: true, rating: 4.5, reviews: 28 },
   { id: 'ka-2', title: 'Toaster 2-Slice', price: 279.99, originalPrice: 329.99, description: 'Stainless steel 2-slice toaster with browning control', image: '/images/toaster.jpg', category: 'kitchen-appliances', stock: 12, rating: 4.3, reviews: 19 },
   { id: 'ka-3', title: 'Blender 500W', price: 459.99, description: 'Multi-function blender with 1.5L jug', image: '/images/blender.jpg', category: 'kitchen-appliances', stock: 8, new: true, rating: 4.6, reviews: 14 },
   { id: 'ka-4', title: 'Microwave Oven 20L', price: 899.99, originalPrice: 1099.99, description: 'Compact 20L microwave with 5 power levels', image: '/images/microwave.jpg', category: 'kitchen-appliances', stock: 6, special: true, rating: 4.4, reviews: 32 },
