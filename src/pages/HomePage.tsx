@@ -739,7 +739,7 @@ function TermsModal() {
           <p><strong>1. Orders:</strong> All orders are subject to product availability. Delivery takes 1-8 business days.</p>
           <p><strong>2. Delivery:</strong> Free delivery for orders above R150. Lower Campus R20, Upper Campus R25.</p>
           <p><strong>3. Payment:</strong> We accept PayShap (0631917709) and Online Payment (Account: 2081845985, MR Ragedi NG).</p>
-          <p><strong>4. Returns:</strong> Items may be returned within 7 days if unused and in original packaging.</p>
+          <p><strong>4. Returns:</strong> Items may be returned within 5 days if unused and in original packaging.</p>
           <p><strong>5. Delays:</strong> If delivery exceeds 9 business days, you will receive R50 off your next purchase.</p>
           <p><strong>6. Account:</strong> You are responsible for maintaining the confidentiality of your account.</p>
           <p><strong>7. Privacy:</strong> We collect your data solely for order processing and delivery.</p>
