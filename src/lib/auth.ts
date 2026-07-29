@@ -93,3 +93,21 @@ export async function insertProfileFallback(userId: string, patch: Partial<User>
   if (error) throw error;
   return data as User;
 }
+// Add to auth.ts
+export async function debugAuthState() {
+  if (!supabase) return;
+  
+  const { data: { session } } = await supabase.auth.getSession();
+  console.log('Current session:', session);
+  
+  if (session?.user) {
+    const { data: profile, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', session.user.id)
+      .single();
+      
+    console.log('Profile:', profile);
+    console.log('Profile error:', error);
+  }
+}
