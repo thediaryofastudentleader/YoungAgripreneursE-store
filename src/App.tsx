@@ -232,48 +232,86 @@ export default function App() {
     setLiked(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
   }, []);
 
-  const login = useCallback(async (email: string, password: string): Promise<boolean> => {
-    if (!supabase) { showToast('Store is not connected to the database yet.', 'error'); return false; }
-    try {
-      const result = await signIn(email, password);
-      // FIX: signIn returns { user, session, weakPassword? } directly, not wrapped in { data, error }
-      if (!result.user) { showToast('Invalid email or password', 'error'); return false; }
-      const profile = await fetchProfile(result.user.id);
-      setUser(profile);
-      showToast(`Welcome back, ${profile?.username || 'friend'}!`, 'success');
-      return true;
-    } catch {
+const login = useCallback(async (email: string, password: string): Promise<boolean> => {
+  if (!supabase) { 
+    showToast('Store is not connected to the database yet.', 'error'); 
+    return false; 
+  }
+  
+  try {
+    const result = await signIn(email, password);
+    
+    if (!result?.user) { 
+      showToast('Invalid email or password', 'error'); 
+      return false; 
+    }
+    
+    const profile = await fetchProfile(result.user.id);
+    setUser(profile);
+    showToast(`Welcome back, ${profile?.username || 'friend'}!`, 'success');
+    return true;
+    
+  } catch (e: unknown) {
+    console.error('Login error:', e);
+    const message = e instanceof Error ? e.message : '';
+    
+    if (message.toLowerCase().includes('invalid')) {
       showToast('Invalid email or password', 'error');
-      return false;
+    } else {
+      showToast('Login failed. Please try again.', 'error');
     }
-  }, [showToast]);
+    return false;
+  }
+}, [showToast]);
 
-  const register = useCallback(async (username: string, email: string, phone: string, address: string, password: string): Promise<boolean> => {
-    if (!supabase) { showToast('Store is not connected to the database yet.', 'error'); return false; }
-    try {
-      const { user: authUser } = await signUp(username, email, phone, address, password);
-      if (!authUser) { showToast('Registration failed. Please try again.', 'error'); return false; }
-      let profile = await fetchProfile(authUser.id);
-      if (!profile) {
-        profile = await insertProfileFallback(authUser.id, { username, email, phone, address });
-      }
-      setUser(profile);
-      showToast('Account created successfully!', 'success');
-      return true;
-    } catch (e: unknown) {
-      const message = e instanceof Error ? e.message : '';
-      showToast(message.toLowerCase().includes('already') ? 'Email already registered' : 'Registration failed. Please try again.', 'error');
-      return false;
+
+const register = useCallback(async (username: string, email: string, phone: string, address: string, password: string): Promise<boolean> => {
+  if (!supabase) { 
+    showToast('Store is not connected to the database yet.', 'error'); 
+    return false; 
+  }
+  
+  try {
+    // Step 1: Create auth user
+    const signUpResult = await signUp(username, email, phone, address, password);
+    
+    if (!signUpResult?.user) { 
+      showToast('Registration failed. Please try again.', 'error'); 
+      return false; 
     }
-  }, [showToast]);
-
-  const logout = useCallback(async () => {
-    await authSignOut();
-    setUser(null);
-    setOrders([]);
-    setShowProfile(false);
-    showToast('Logged out successfully', 'info');
-  }, [showToast]);
+    
+    // Step 2: Wait for trigger to create profile
+    let profile = await fetchProfile(signUpResult.user.id);
+    
+    // Step 3: Fallback if trigger didn't create profile
+    if (!profile) {
+      profile = await insertProfileFallback(signUpResult.user.id, { 
+        username, 
+        email, 
+        phone, 
+        address 
+      });
+    }
+    
+    setUser(profile);
+    showToast('Account created successfully!', 'success');
+    return true;
+    
+  } catch (e: unknown) {
+    console.error('Registration error:', e);
+    const message = e instanceof Error ? e.message : '';
+    
+    // Handle specific error messages
+    if (message.toLowerCase().includes('already registered')) {
+      showToast('Email already registered', 'error');
+    } else if (message.toLowerCase().includes('password')) {
+      showToast('Password does not meet requirements', 'error');
+    } else {
+      showToast('Registration failed. Please try again.', 'error');
+    }
+    return false;
+  }
+}, [showToast]);
 
   const updateProfile = useCallback(async (data: Partial<User>) => {
     if (!user) return;
