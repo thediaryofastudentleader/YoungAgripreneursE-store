@@ -437,6 +437,15 @@ const register = useCallback(async (username: string, email: string, phone: stri
     setPendingReviewOrder(null);
   }, [showToast]);
 
+  // ✅ Define logout BEFORE the ctx object
+const logout = useCallback(async () => {
+  await authSignOut();
+  setUser(null);
+  setOrders([]);
+  setShowProfile(false);
+  showToast('Logged out successfully', 'info');
+}, [showToast]);
+
   const ctx: AppContextType = {
     dark, setDark, activeTab, setActiveTab,
     showCart, setShowCart, showAccount, setShowAccount,
