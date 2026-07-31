@@ -77,21 +77,20 @@ export const products: Product[] = [
   { id: 'jw-2', title: 'Necklaces for Women, 14K-Gold-Plated Layering Hexagon Letter ', price: 700.00, description: 'Necklace set. Featuring two 14K gold-plated brass paperclip chains (18"+2" and 14"+2" extensions), this layered design includes a hexagon charm engraved with your initial and a heart. Perfect for women and teen girls, it arrives in an elegant gift box—ideal for gifting or everyday wear. Nickel-free, no gemstone, and suitable for ages 6+.', image: '/images/layered-necklace.jpg', category: 'jewelry', stock: 14, rating: 4.4, reviews: 16 },
   { id: 'jw-3', title: 'Italian Charms Bracelet Set 9 modular 9mm charms', price: 930.00, description: 'a classic starter bracelet, 9 modular 9mm charms, and a handy tool for easy assembly. Made from durable stainless steel in silver and gold tones, the charms feature retractable snaps for effortless customization. Compatible with major Italian charm brands and perfect for gifting or DIY moments with loved ones.', image: '/images/charm-bracelet.jpg', category: 'jewelry', stock: 22, new: true, rating: 4.3, reviews: 11 },
   { id: 'jw-4', title: 'Stud Earring Set', price: 69.99, description: 'Set of 6 pairs of stud earrings', image: '/images/stud-set.jpg', category: 'jewelry', stock: 25, rating: 4.5, reviews: 19 },
-
   // Hair Dye
-  { id: 'hd-1', title: 'Jet Black Hair Dye', price: 59.99, description: 'Permanent hair colour, jet black', image: '/images/black-dye.jpg', category: 'hair-dye', stock: 20, rating: 4.2, reviews: 15 },
-  { id: 'hd-2', title: 'Burgundy Red Dye', price: 64.99, description: 'Vibrant burgundy red hair dye', image: '/images/burgundy-dye.jpg', category: 'hair-dye', stock: 15, trending: true, rating: 4.4, reviews: 22 },
-  { id: 'hd-3', title: 'Honey Blonde Dye', price: 69.99, description: 'Warm honey blonde hair colour', image: '/images/blonde-dye.jpg', category: 'hair-dye', stock: 12, rating: 4.3, reviews: 13 },
+  { id: 'hd-1', title: 'Jet Black Hair Dye', price: 199.00, description: 'Permanent hair colour, jet black', image: '/images/black-dye.jpg', category: 'hair-dye', stock: 20, rating: 4.2, reviews: 15 },
+  { id: 'hd-2', title: 'Burgundy Red Dye', price: 124.00, description: 'Vibrant burgundy red hair dye', image: '/images/burgundy-dye.jpg', category: 'hair-dye', stock: 15, trending: true, rating: 4.4, reviews: 22 },
+  { id: 'hd-3', title: 'Honey Blonde Dye', price: 199.00, description: 'Warm honey blonde hair colour', image: '/images/blonde-dye.jpg', category: 'hair-dye', stock: 12, rating: 4.3, reviews: 13 },
 
   // Hair Styling Tools
-  { id: 'hs-1', title: 'Hair Straightener', price: 349.99, originalPrice: 449.99, description: 'Ceramic plate hair straightener with temp control', image: '/images/straightener.jpg', category: 'hair-styling', stock: 8, special: true, rating: 4.7, reviews: 31 },
-  { id: 'hs-2', title: 'Curling Wand', price: 279.99, description: '25mm barrel curling wand', image: '/images/curling-wand.jpg', category: 'hair-styling', stock: 10, rating: 4.5, reviews: 18 },
-  { id: 'hs-3', title: 'Hair Dryer 2000W', price: 299.99, description: 'Professional 2000W ionic hair dryer', image: '/images/hair-dryer.jpg', category: 'hair-styling', stock: 12, trending: true, rating: 4.6, reviews: 25 },
-  { id: 'hs-4', title: 'Hair Brush Set', price: 129.99, description: '3-piece detangling brush set', image: '/images/brush-set-hair.jpg', category: 'hair-styling', stock: 18, rating: 4.2, reviews: 14 },
+  { id: 'hs-1', title: 'Hair Straightener', price: 249.00, originalPrice: 269.00, description: 'Ceramic plate hair straightener with temp control', image: '/images/straightener.jpg', category: 'hair-styling', stock: 8, special: true, rating: 4.7, reviews: 31 },
+  { id: 'hs-2', title: 'Curling Wand', price: 330.00, description: '25mm barrel curling wand', image: '/images/curling-wand.jpg', category: 'hair-styling', stock: 10, rating: 4.5, reviews: 18 },
+  { id: 'hs-3', title: 'Hair Dryer 2000W', price: 580.00, description: 'Professional 2000W ionic hair dryer', image: '/images/hair-dryer.jpg', category: 'hair-styling', stock: 12, trending: true, rating: 4.6, reviews: 25 },
+  { id: 'hs-4', title: 'Hair Brush Set', price: 239.00, description: '3-piece detangling brush set', image: '/images/brush-set-hair.jpg', category: 'hair-styling', stock: 18, rating: 4.2, reviews: 14 },
 
   // Hair & Scalp Treatments
-  { id: 'ht-1', title: 'Hair Growth Oil', price: 89.99, description: 'Castor oil blend for hair growth 100ml', image: '/images/hair-oil.jpg', category: 'hair-treatment', stock: 16, trending: true, rating: 4.5, reviews: 28 },
-  { id: 'ht-2', title: 'Deep Conditioner', price: 79.99, description: 'Moisturising deep conditioner 300ml', image: '/images/conditioner.jpg', category: 'hair-treatment', stock: 20, rating: 4.4, reviews: 19 },
+  { id: 'ht-1', title: 'Hair Growth Oil', price: 90.00, description: 'Castor oil blend for hair growth 100ml', image: '/images/hair-oil.jpg', category: 'hair-treatment', stock: 16, trending: true, rating: 4.5, reviews: 28 },
+  { id: 'ht-2', title: 'Deep Conditioner', price: 209.00, description: 'Moisturising deep conditioner 300ml', image: '/images/conditioner.jpg', category: 'hair-treatment', stock: 20, rating: 4.4, reviews: 19 },
   { id: 'ht-3', title: 'Anti-Dandruff Shampoo', price: 69.99, description: 'Medicated anti-dandruff shampoo 400ml', image: '/images/dandruff-shampoo.jpg', category: 'hair-treatment', stock: 14, rating: 4.3, reviews: 16 },
 
   // Body-care for Men
