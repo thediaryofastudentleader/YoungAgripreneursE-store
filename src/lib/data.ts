@@ -53,6 +53,11 @@ export const products: Product[] = [
   { id: 'mt-2', title: 'Black Graphic Tee', price: 319.00, description: 'Black Fuel graphic T-shirt made from carded single jersey, with short sleeves and a classic black finish.', image: '/images/mens-graphic-tee.jpg', category: 'mens-tshirts', stock: 18, new: true, rating: 4.2, reviews: 19 },
   { id: 'mt-3', title: 'White and Navy Airtex Inset T-Shirt', price: 260.00, description: 'White and navy Hemisphere Sport T-shirt made from Airtex fabric, with short sleeves and a breathable, athletic look.', image: '/images/mens-navy-tee.jpg', category: 'mens-tshirts', stock: 20, rating: 4.3, reviews: 16 },
   { id: 'mt-4', title: 'Grey Polo Neck T-shirt', price: 109.99, description: 'the Truworths Man Grey Polo Neck T-shirt, featuring long sleeves and crafted from cotton-rich fleece for comfort and style.', image: '/images/mens-grey-tee.jpg', category: 'mens-tshirts', stock: 15, rating: 4.1, reviews: 11 },
+  { id: 'mt-1', title: 'Borussia Dortmund Special Edition Jersey Men', price: 2320.00, description: 'White Daniel Hechter T-shirt in a cotton-blend knit, featuring short sleeves and a clean white finish.', image: '/images/mens-white-tee.jpg', category: 'mens-tshirts', stock: 25, trending: true, rating: 4.5, reviews: 42 },
+  { id: 'mt-2', title: 'BMW M MOTORSPORT Essentials Tee Men', price: 919.00, description: 'Black Fuel graphic T-shirt made from carded single jersey, with short sleeves and a classic black finish.', image: '/images/mens-graphic-tee.jpg', category: 'mens-tshirts', stock: 18, new: true, rating: 4.2, reviews: 19 },
+  { id: 'mt-3', title: 'House of Graphics Record Tee Men', price: 960.00, description: 'White and navy Hemisphere Sport T-shirt made from Airtex fabric, with short sleeves and a breathable, athletic look.', image: '/images/mens-navy-tee.jpg', category: 'mens-tshirts', stock: 20, rating: 4.3, reviews: 16 },
+  { id: 'mt-4', title: 'Graphic Balloon Art Relaxed Tee Men', price: 649.99, description: 'the Truworths Man Grey Polo Neck T-shirt, featuring long sleeves and crafted from cotton-rich fleece for comfort and style.', image: '/images/mens-grey-tee.jpg', category: 'mens-tshirts', stock: 15, rating: 4.1, reviews: 11 },
+
 
   // Women's T-Shirts
   { id: 'wt-1', title: 'Pink Side Trim Cropped Top', price: 450.00, description: 'Inwear Pink Side Trim Cropped Top—a stylish crop top in vibrant pink, crafted from 100% polyester with side trim detail, short sleeves, and a classic crew neck.', image: '/images/womens-crop-tee.jpg', category: 'womens-tshirts', stock: 22, trending: true, rating: 4.4, reviews: 27 },
@@ -156,16 +161,56 @@ export const products: Product[] = [
   { id: 'cb-3', title: 'Party Banner Kit', price: 49.99, description: 'Happy Birthday banner with decorations', image: '/images/party-banner.jpg', category: 'celebrations', stock: 18, rating: 4.3, reviews: 14 },
   { id: 'cb-4', title: 'Photo Props Set', price: 59.99, description: '20-piece photo booth props set', image: '/images/photo-props.jpg', category: 'celebrations', stock: 25, rating: 4.2, reviews: 9 },
 
-  // Bicycles
+  // Bicycles-DONE
   { id: 'bc-1', title: 'Full Suspension Mountain Bike', price: 5199.00, description: '26-inch mountain bike, 21-speed', image: '/images/mountain-bike.jpg', category: 'bicycles', stock: 4, trending: true, rating: 4.6, reviews: 8 },
   { id: 'bc-2', title: '26 Inch Fat Tire Mountain Trail Bike 7 gear', price: 5999.00, description: 'Single-speed city cruiser bicycle', image: '/images/city-bike.jpg', category: 'bicycles', stock: 5, rating: 4.4, reviews: 6 },
   { id: 'bc-3', title: 'Bike ', price: 2250.00, description: 'Adjustable safety bike helmet', image: '/images/bike-helmet.jpg', category: 'bicycles', stock: 12, rating: 4.5, reviews: 14 },
 
-  // Shoes
+  // Shoes men
   { id: 'sh-1', title: 'White Sneakers', price: 649.00, description: 'Classic white canvas sneakers', image: '/images/white-sneakers.jpg', category: 'shoes', stock: 15, trending: true, rating: 4.5, reviews: 31 },
-  { id: 'sh-2', title: 'Running Shoes', price: 699.99, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  
+  { id: 'sh-2', title: 'Skyrocket Lite 2 Running Shoes Unisex', price: 1300.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-3', title: 'Flyer Lite 3 Running Shoes', price: 1150.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-4', title: 'FlexFocus Lite Modern Running Shoes Unisex', price: 1349.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-5', title: 'Retaliate 3 Running Shoes Unisex', price: 1549.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-6', title: 'Electrify NITRO™ 4 Running Shoes Men', price: 1589.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-7', title: 'Electrify NITRO™ 5 Running Shoes Unisex', price: 2249.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-2', title: 'FAST-Trac NITRO™ 4 Trail Running Shoes Men', price: 3349.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-5', title: 'BMW M Motorsport Drift Cat 11 Sneakers Unisex', price: 1950.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'McLAREN RACING Caven III Sneakers Unisex', price: 1649.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'BMW M MOTORSPORT RS Surge Sneakers Unisex', price: 3059.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'SOFTRIDE Cosmic Sneakers Unisex', price: 799.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Shuffle Downtown Sneakers Unisex', price: 1310.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Suede XL Leather Sneakers Unisex', price: 1999.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Solarflash III Indoor Sports Shoes', price: 1860.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Milenio Tech 2000 Sneakers Unisex', price: 1610.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Desierto v3 Boots', price: 1950.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Shuffle Downtown Mid Sneakers Unisex', price: 1459.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'PUMA Fade Sneakers Unisex', price: 2760.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Suede Classic Sneakers Unisex', price: 1940.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Homura OG+ Sneakers Unisex', price: 2550.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  // shoes women
+  { id: 'sh-2', title: 'Velocity NITRO™ 4 Running Shoes Women', price: 3150.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-2', title: 'Magnify NITRO™ 3 Running Shoes Women', price: 2200.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
+  { id: 'sh-2', title: 'Dasher Lite Running Shoes Unisex', price: 1249.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
   { id: 'sh-3', title: 'White Rebound Femme Mid Sneakers', price: 1499.00, description: 'Casual slip-on canvas shoes', image: '/images/slipon-shoes.jpg', category: 'shoes', stock: 14, rating: 4.4, reviews: 17 },
+    
   { id: 'sh-4', title: 'Green Hiking Boots', price: 899.99, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Catch Soleil Ballerina Shoes Women', price: 1250.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Court Lally Skye Feline Sneakers Women', price: 1449.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Catch Soleil Ballerina Shoes Women', price: 1250.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'PUMA x ASTON MARTIN ARAMCO F1® TEAM Caven III Low Sneakers Unisex', price: 1600.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Anzarun 2 Lite SLIPTECH™ Sneakers Unisex', price: 1250.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'K-Moda Sneakers Women', price: 1449.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Jada Classic Sneakers Women', price: 799.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Style Bolero 2.0 Sneakers Women', price: 199.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Carina Mia Sneakers Women', price: 1549.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Shuffle Downtown Sneakers Unisex', price: 799.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'BasicBalleCutOutFeatherZAD', price: 729.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'SOFTRIDE Cosmic Sneakers Unisex', price: 2210.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-5', title: 'Caven III Sneakers Unisex', price: 1450.00, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  
+  
 ];
 
 export const iconMap: Record<string, string> = {
