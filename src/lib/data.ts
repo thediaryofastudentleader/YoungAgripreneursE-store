@@ -145,9 +145,9 @@ export const products: Product[] = [
 
   // Back to School
   { id: 'bs-1', title: 'Casio Calculator', price: 249.99, description: 'Casio scientific calculator fx-991ES', image: '/images/casio-calc.jpg', category: 'back-to-school', stock: 12, trending: true, rating: 4.7, reviews: 36 },
-  { id: 'bs-2', title: 'A4 Notebook 5-Pack', price: 79.99, description: '5-pack hardcover A4 ruled notebooks', image: '/images/notebook.jpg', category: 'back-to-school', stock: 25, rating: 4.4, reviews: 22 },
-  { id: 'bs-3', title: 'Pens Assorted 20-Pack', price: 49.99, description: '20 assorted ballpoint pens, various colours', image: '/images/pens.jpg', category: 'back-to-school', stock: 30, rating: 4.3, reviews: 18 },
-  { id: 'bs-4', title: 'Highlighters 6-Pack', price: 39.99, description: 'Fluorescent highlighters, 6 colours', image: '/images/highlighters.jpg', category: 'back-to-school', stock: 28, rating: 4.5, reviews: 15 },
+  { id: 'bs-2', title: 'A4 Hardcover Notebook, 384 Pages', price: 99.00, description: '5-pack hardcover A4 ruled notebooks', image: '/images/notebook.jpg', category: 'back-to-school', stock: 25, rating: 4.4, reviews: 22 },
+  { id: 'bs-3', title: 'Pens Assorted 20-Pack BIC Crystal Xtra Life', price: 162.00, description: '20 assorted ballpoint pens, various colours', image: '/images/pens.jpg', category: 'back-to-school', stock: 30, rating: 4.3, reviews: 18 },
+  { id: 'bs-4', title: 'Highlighters 6-Pack', price: 59.00, description: 'Fluorescent highlighters, 6 colours', image: '/images/highlighters.jpg', category: 'back-to-school', stock: 28, rating: 4.5, reviews: 15 },
   { id: 'bs-5', title: 'Pencil Case', price: 59.99, description: 'Large capacity canvas pencil case', image: '/images/pencil-case.jpg', category: 'back-to-school', stock: 22, rating: 4.2, reviews: 12 },
 
   // Celebrations
