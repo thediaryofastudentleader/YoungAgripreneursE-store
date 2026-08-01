@@ -85,6 +85,14 @@ export const products: Product[] = [
  { id: 'mt-1', title: 'Training Bottle', price: 249.00, description: 'White Daniel Hechter T-shirt in a cotton-blend knit, featuring short sleeves and a clean white finish.', image: '/images/mens-white-tee.jpg', category: 'mens-tshirts', stock: 25, trending: true, rating: 4.5, reviews: 42 },
   { id: 'mt-2', title: 'PUMA Academy 29L All-Over Print Backpack', price: 619.00, description: 'Black Fuel graphic T-shirt made from carded single jersey, with short sleeves and a classic black finish.', image: '/images/mens-graphic-tee.jpg', category: 'mens-tshirts', stock: 18, new: true, rating: 4.2, reviews: 19 },
   { id: 'mt-3', title: 'Academy 2L Waist Bag', price: 850.00, description: 'White and navy Hemisphere Sport T-shirt made from Airtex fabric, with short sleeves and a breathable, athletic look.', image: '/images/mens-navy-tee.jpg', category: 'mens-tshirts', stock: 20, rating: 4.3, reviews: 16 },
+
+  // Men's Socks
+  { id: 'mt-3', title: 'Modalon Golf Polo Men', price: 1300.00, description: 'White and navy Hemisphere Sport T-shirt made from Airtex fabric, with short sleeves and a breathable, athletic look.', image: '/images/mens-navy-tee.jpg', category: 'mens-tshirts', stock: 20, rating: 4.3, reviews: 16 },
+  { id: 'mt-3', title: 'Mens 3pkTennis Socks', price: 345.00, description: 'White and navy Hemisphere Sport T-shirt made from Airtex fabric, with short sleeves and a breathable, athletic look.', image: '/images/mens-navy-tee.jpg', category: 'mens-tshirts', stock: 20, rating: 4.3, reviews: 16 },
+
+  // Men's Sport
+  { id: 'mt-3', title: 'Mens 3 Pk Low Cut Socks', price: 250.00, description: 'White and navy Hemisphere Sport T-shirt made from Airtex fabric, with short sleeves and a breathable, athletic look.', image: '/images/mens-navy-tee.jpg', category: 'mens-tshirts', stock: 20, rating: 4.3, reviews: 16 },
+  { id: 'mt-3', title: 'Manchester City 25/26 Third Jersey Men', price: 1445.00, description: 'White and navy Hemisphere Sport T-shirt made from Airtex fabric, with short sleeves and a breathable, athletic look.', image: '/images/mens-navy-tee.jpg', category: 'mens-tshirts', stock: 20, rating: 4.3, reviews: 16 },
   
   // Women's T-Shirts
   { id: 'wt-1', title: 'Pink Side Trim Cropped Top', price: 450.00, description: 'Inwear Pink Side Trim Cropped Top—a stylish crop top in vibrant pink, crafted from 100% polyester with side trim detail, short sleeves, and a classic crew neck.', image: '/images/womens-crop-tee.jpg', category: 'womens-tshirts', stock: 22, trending: true, rating: 4.4, reviews: 27 },
