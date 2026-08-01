@@ -144,22 +144,22 @@ export const products: Product[] = [
   { id: 'sg-3', title: 'Round Retro Shades', price: 129.99, description: 'Round retro style sunglasses', image: '/images/round-sunglasses.jpg', category: 'sunglasses', stock: 15, rating: 4.3, reviews: 13 },
 
   // Back to School
-  { id: 'bs-1', title: 'Casio Calculator', price: 249.99, description: 'Casio scientific calculator fx-991ES', image: '/images/casio-calc.jpg', category: 'back-to-school', stock: 12, trending: true, rating: 4.7, reviews: 36 },
+  { id: 'bs-1', title: 'Casio Calculator', price: 310.99, originalPrice: 329.00, description: 'Casio scientific calculator fx-991ES', image: '/images/casio-calc.jpg', category: 'back-to-school', stock: 12, trending: true, rating: 4.7, reviews: 36 },
   { id: 'bs-2', title: 'A4 Hardcover Notebook, 384 Pages', price: 99.00, description: '5-pack hardcover A4 ruled notebooks', image: '/images/notebook.jpg', category: 'back-to-school', stock: 25, rating: 4.4, reviews: 22 },
   { id: 'bs-3', title: 'Pens Assorted 20-Pack BIC Crystal Xtra Life', price: 162.00, description: '20 assorted ballpoint pens, various colours', image: '/images/pens.jpg', category: 'back-to-school', stock: 30, rating: 4.3, reviews: 18 },
   { id: 'bs-4', title: 'Highlighters 6-Pack', price: 59.00, description: 'Fluorescent highlighters, 6 colours', image: '/images/highlighters.jpg', category: 'back-to-school', stock: 28, rating: 4.5, reviews: 15 },
-  { id: 'bs-5', title: 'Pencil Case', price: 59.99, description: 'Large capacity canvas pencil case', image: '/images/pencil-case.jpg', category: 'back-to-school', stock: 22, rating: 4.2, reviews: 12 },
+  { id: 'bs-5', title: 'LANCI 2-Piece Fluffy Pencil Pouch Set', price: 199.00, description: 'Large capacity canvas pencil case', image: '/images/pencil-case.jpg', category: 'back-to-school', stock: 22, rating: 4.2, reviews: 12 },
 
   // Celebrations
-  { id: 'cb-1', title: 'Birthday Balloons Set', price: 69.99, description: '30-pack assorted birthday balloons', image: '/images/balloons.jpg', category: 'celebrations', stock: 20, trending: true, rating: 4.4, reviews: 19 },
-  { id: 'cb-2', title: 'Graduation Sash', price: 89.99, description: 'Class of 2025 graduation sash', image: '/images/grad-sash.jpg', category: 'celebrations', stock: 15, rating: 4.5, reviews: 11 },
+  { id: 'cb-1', title: 'Birthday Balloons Set', price: 350.00, description: '30-pack assorted birthday balloons', image: '/images/balloons.jpg', category: 'celebrations', stock: 20, trending: true, rating: 4.4, reviews: 19 },
+  { id: 'cb-2', title: 'Graduation Sash Moutina Mexican', price: 89.99, description: 'Class of 2025 graduation sash', image: '/images/grad-sash.jpg', category: 'celebrations', stock: 15, rating: 4.5, reviews: 11 },
   { id: 'cb-3', title: 'Party Banner Kit', price: 49.99, description: 'Happy Birthday banner with decorations', image: '/images/party-banner.jpg', category: 'celebrations', stock: 18, rating: 4.3, reviews: 14 },
   { id: 'cb-4', title: 'Photo Props Set', price: 59.99, description: '20-piece photo booth props set', image: '/images/photo-props.jpg', category: 'celebrations', stock: 25, rating: 4.2, reviews: 9 },
 
   // Bicycles
-  { id: 'bc-1', title: 'Mountain Bike 26"', price: 2499.99, description: '26-inch mountain bike, 21-speed', image: '/images/mountain-bike.jpg', category: 'bicycles', stock: 4, trending: true, rating: 4.6, reviews: 8 },
-  { id: 'bc-2', title: 'City Cruiser Bike', price: 1899.99, description: 'Single-speed city cruiser bicycle', image: '/images/city-bike.jpg', category: 'bicycles', stock: 5, rating: 4.4, reviews: 6 },
-  { id: 'bc-3', title: 'Bike Helmet', price: 299.99, description: 'Adjustable safety bike helmet', image: '/images/bike-helmet.jpg', category: 'bicycles', stock: 12, rating: 4.5, reviews: 14 },
+  { id: 'bc-1', title: 'Full Suspension Mountain Bike', price: 5199.00, description: '26-inch mountain bike, 21-speed', image: '/images/mountain-bike.jpg', category: 'bicycles', stock: 4, trending: true, rating: 4.6, reviews: 8 },
+  { id: 'bc-2', title: '26 Inch Fat Tire Mountain Trail Bike 7 gear', price: 5999.00, description: 'Single-speed city cruiser bicycle', image: '/images/city-bike.jpg', category: 'bicycles', stock: 5, rating: 4.4, reviews: 6 },
+  { id: 'bc-3', title: 'Bike ', price: 2250.00, description: 'Adjustable safety bike helmet', image: '/images/bike-helmet.jpg', category: 'bicycles', stock: 12, rating: 4.5, reviews: 14 },
 
   // Shoes
   { id: 'sh-1', title: 'White Sneakers', price: 449.99, description: 'Classic white canvas sneakers', image: '/images/white-sneakers.jpg', category: 'shoes', stock: 15, trending: true, rating: 4.5, reviews: 31 },
