@@ -162,10 +162,10 @@ export const products: Product[] = [
   { id: 'bc-3', title: 'Bike ', price: 2250.00, description: 'Adjustable safety bike helmet', image: '/images/bike-helmet.jpg', category: 'bicycles', stock: 12, rating: 4.5, reviews: 14 },
 
   // Shoes
-  { id: 'sh-1', title: 'White Sneakers', price: 449.99, description: 'Classic white canvas sneakers', image: '/images/white-sneakers.jpg', category: 'shoes', stock: 15, trending: true, rating: 4.5, reviews: 31 },
+  { id: 'sh-1', title: 'White Sneakers', price: 649.00, description: 'Classic white canvas sneakers', image: '/images/white-sneakers.jpg', category: 'shoes', stock: 15, trending: true, rating: 4.5, reviews: 31 },
   { id: 'sh-2', title: 'Running Shoes', price: 699.99, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
-  { id: 'sh-3', title: 'Slip-On Vans Style', price: 379.99, description: 'Casual slip-on canvas shoes', image: '/images/slipon-shoes.jpg', category: 'shoes', stock: 14, rating: 4.4, reviews: 17 },
-  { id: 'sh-4', title: 'Hiking Boots', price: 899.99, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
+  { id: 'sh-3', title: 'White Rebound Femme Mid Sneakers', price: 1499.00, description: 'Casual slip-on canvas shoes', image: '/images/slipon-shoes.jpg', category: 'shoes', stock: 14, rating: 4.4, reviews: 17 },
+  { id: 'sh-4', title: 'Green Hiking Boots', price: 899.99, description: 'Waterproof hiking boots, outdoor', image: '/images/hiking-boots.jpg', category: 'shoes', stock: 8, rating: 4.5, reviews: 12 },
 ];
 
 export const iconMap: Record<string, string> = {
