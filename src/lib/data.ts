@@ -277,19 +277,17 @@ export const products: Product[] = [
   { id: 'mp-2', title: 'The Sioux Cat Eye Gel Nail Polish Set', price: 269.00, description: 'The Sioux Cat Eye Gel Nail Polish Set (Aurora Lights) features 3 magnetic cat eye gel colors with a shimmering, velvet-like finish. Includes a magnet for easy 3D effects, a low-odor vegan formula, and salon-quality, chip-resistant wear for up to 28 days. Perfect for gifting or DIY manicures.', image: '/images/nail-polish.jpg', category: 'manicure', stock: 15, trending: true, rating: 4.5, reviews: 22 },
   { id: 'mp-3', title: 'Electric Nail Drill 6 in 1', price: 429., description: 'The Atopskins Electric Nail Drill 6 in 1 is a cordless, professional manicure set with adjustable speeds up to 45,000 RPM. It includes 6 drill bits, sanding bands, a double-sided emery board, and a rechargeable 2000mAh battery for up to 10 hours of use. Perfect for acrylic, gel, or natural nails—compact, portable, and easy to use for beginners and pros alike.', image: '/images/nail-drill.jpg', category: 'manicure', stock: 8, rating: 4.4, reviews: 12 },
 
-  // Hoodies & Sweatshirts
-  { id: 'hs-1', title: 'Black Zip Hoodie', price: 349.99, description: 'Classic black zip-up hoodie, fleece-lined', image: '/images/black-hoodie.jpg', category: 'hoodies', stock: 15, trending: true, rating: 4.6, reviews: 29 },
-  { id: 'hs-2', title: 'Grey Crew Sweatshirt', price: 299.99, description: 'Comfortable grey crew neck sweatshirt', image: '/images/grey-sweatshirt.jpg', category: 'hoodies', stock: 12, rating: 4.4, reviews: 17 },
-  { id: 'hs-3', title: 'Oversized Hoodie', price: 379.99, description: 'Trendy oversized hoodie, unisex', image: '/images/oversized-hoodie.jpg', category: 'hoodies', stock: 10, new: true, rating: 4.5, reviews: 14 },
-  { id: 'hs-4', title: 'Cropped Sweatshirt', price: 279.99, description: 'Cropped fit sweatshirt, pastel colours', image: '/images/cropped-sweat.jpg', category: 'hoodies', stock: 14, rating: 4.3, reviews: 11 },
+  //Extra hotness Hoodies & Sweatshirts
+  { id: 'hs-2', title: 'Grey Graphic Sweatshirt', price: 499.00, description: 'Grey Graphic Sweatshirt by Fuel features a primary colour of grey, long sleeves, and is crafted from soft polyfleece fabric. This stylish sweatshirt combines comfort and warmth, making it a versatile addition to any wardrobe.', image: '/images/grey-sweatshirt.jpg', category: 'hoodies', stock: 12, rating: 4.4, reviews: 17 },
+  { id: 'hs-3', title: 'White Oversized Racoon Hoodie', price: 619.00, description: 'the White Oversized Racoon Hoodie by Inwear, highlighting its colour, style, soft brushed stretch fleece fabric, and comfortable long sleeves for a modern, relaxed look.', image: '/images/oversized-hoodie.jpg', category: 'hoodies', stock: 10, new: true, rating: 4.5, reviews: 14 },
+  { id: 'hs-4', title: 'Black Faux Fur Cropped Bolero Jacket', price: 859.00, description: 'the Black Faux Fur Cropped Bolero Jacket by Truworths, highlighting its plush faux fur, elegant details, and statement-making style for evening occasions.', image: '/images/cropped-sweat.jpg', category: 'hoodies', stock: 14, rating: 4.3, reviews: 11 },
 
-  // Sunglasses
-  { id: 'sg-1', title: 'Classic Aviators', price: 159.99, description: 'UV400 aviator sunglasses, gold frame', image: '/images/aviators.jpg', category: 'sunglasses', stock: 18, trending: true, rating: 4.5, reviews: 24 },
-  { id: 'sg-2', title: 'Wayfarer Style', price: 139.99, description: 'Black wayfarer sunglasses', image: '/images/wayfarer.jpg', category: 'sunglasses', stock: 20, rating: 4.4, reviews: 19 },
-  { id: 'sg-3', title: 'Round Retro Shades', price: 129.99, description: 'Round retro style sunglasses', image: '/images/round-sunglasses.jpg', category: 'sunglasses', stock: 15, rating: 4.3, reviews: 13 },
+  //Extra hotness Sunglasses Men and Women
+  { id: 'sg-1', title: 'Classic Aviators', price: 852.00, description: 'UV400 aviator sunglasses, gold frame', image: '/images/aviators.jpg', category: 'sunglasses', stock: 18, trending: true, rating: 4.5, reviews: 24 },
 
   // Back to School
   { id: 'bs-1', title: 'Casio Calculator', price: 310.99, originalPrice: 329.00, description: 'Casio scientific calculator fx-991ES', image: '/images/casio-calc.jpg', category: 'back-to-school', stock: 12, trending: true, rating: 4.7, reviews: 36 },
+  { id: 'bs-1', title: 'Financial Calculator', price: 310.99, originalPrice: 329.00, description: 'Casio scientific calculator fx-991ES', image: '/images/casio-calc.jpg', category: 'back-to-school', stock: 12, trending: true, rating: 4.7, reviews: 36 },
   { id: 'bs-2', title: 'A4 Hardcover Notebook, 384 Pages', price: 99.00, description: '5-pack hardcover A4 ruled notebooks', image: '/images/notebook.jpg', category: 'back-to-school', stock: 25, rating: 4.4, reviews: 22 },
   { id: 'bs-3', title: 'Pens Assorted 20-Pack BIC Crystal Xtra Life', price: 162.00, description: '20 assorted ballpoint pens, various colours', image: '/images/pens.jpg', category: 'back-to-school', stock: 30, rating: 4.3, reviews: 18 },
   { id: 'bs-4', title: 'Highlighters 6-Pack', price: 59.00, description: 'Fluorescent highlighters, 6 colours', image: '/images/highlighters.jpg', category: 'back-to-school', stock: 28, rating: 4.5, reviews: 15 },
@@ -297,9 +295,9 @@ export const products: Product[] = [
 
   // Celebrations
   { id: 'cb-1', title: 'Birthday Balloons Set', price: 350.00, description: '30-pack assorted birthday balloons', image: '/images/balloons.jpg', category: 'celebrations', stock: 20, trending: true, rating: 4.4, reviews: 19 },
-  { id: 'cb-2', title: 'Graduation Sash Moutina Mexican', price: 89.99, description: 'Class of 2025 graduation sash', image: '/images/grad-sash.jpg', category: 'celebrations', stock: 15, rating: 4.5, reviews: 11 },
-  { id: 'cb-3', title: 'Party Banner Kit', price: 49.99, description: 'Happy Birthday banner with decorations', image: '/images/party-banner.jpg', category: 'celebrations', stock: 18, rating: 4.3, reviews: 14 },
-  { id: 'cb-4', title: 'Photo Props Set', price: 59.99, description: '20-piece photo booth props set', image: '/images/photo-props.jpg', category: 'celebrations', stock: 25, rating: 4.2, reviews: 9 },
+  { id: 'cb-2', title: 'Graduation Sash Moutina Mexican', price: 520.00, description: 'Class of 2025 graduation sash', image: '/images/grad-sash.jpg', category: 'celebrations', stock: 15, rating: 4.5, reviews: 11 },
+  { id: 'cb-3', title: 'Party Banner Kit', price: 159.00, description: 'Happy Birthday banner with decorations', image: '/images/party-banner.jpg', category: 'celebrations', stock: 18, rating: 4.3, reviews: 14 },
+  { id: 'cb-4', title: '30pcs Graduation Photo Prop Set', price: 100.00, description: 'Black & Gold Photography Studio Decor, Includes 2026 Graduation Decorations, With Stick Props, Suitable For High School And College Graduation Party', image: '/images/photo-props.jpg', category: 'celebrations', stock: 25, rating: 4.2, reviews: 9 },
 
   // Bicycles-DONE
   { id: 'bc-1', title: 'Full Suspension Mountain Bike', price: 5199.00, description: '26-inch mountain bike, 21-speed', image: '/images/mountain-bike.jpg', category: 'bicycles', stock: 4, trending: true, rating: 4.6, reviews: 8 },
@@ -307,8 +305,6 @@ export const products: Product[] = [
   { id: 'bc-3', title: 'Bike ', price: 2250.00, description: 'Adjustable safety bike helmet', image: '/images/bike-helmet.jpg', category: 'bicycles', stock: 12, rating: 4.5, reviews: 14 },
 
   // Shoes men
-  { id: 'sh-1', title: 'White Sneakers', price: 649.00, description: 'Classic white canvas sneakers', image: '/images/white-sneakers.jpg', category: 'shoes', stock: 15, trending: true, rating: 4.5, reviews: 31 },
-  
   { id: 'sh-2', title: 'Skyrocket Lite 2 Running Shoes Unisex', price: 1300.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
   { id: 'sh-3', title: 'Flyer Lite 3 Running Shoes', price: 1150.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
   { id: 'sh-4', title: 'FlexFocus Lite Modern Running Shoes Unisex', price: 1349.00, description: 'Lightweight running shoes, breathable mesh', image: '/images/running-shoes.jpg', category: 'shoes', stock: 10, rating: 4.6, reviews: 22 },
