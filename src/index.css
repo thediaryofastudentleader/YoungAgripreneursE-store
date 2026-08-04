@@ -1,0 +1,297 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --sh-accent: 240 4.8% 95.9%; /* shadcn accent — renamed: --accent is now the theme accent below */
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --sh-accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', system-ui, sans-serif;
+  }
+}
+
+/* ==========================================================================
+   YOUNG AGRIPRENEURS — SIGNATURE DESIGN SYSTEM
+   Adapted from the "Intelligent Retail" reference: deep botanical ink,
+   warm porcelain, brass detailing, royal-purple moments, signal mint.
+   ========================================================================== */
+@layer base {
+  :root {
+    /* Shared palette — identical in both themes */
+    --ink: #0B1D1F;
+    --ink-soft: #122B2E;
+    --porcelain: #F2EFE6;
+    --porcelain-deep: #E9E4D6;
+    --brass: #C8A96A;
+    --brass-deep: #A9884B;
+    --royal: #6D2077;
+    --signal: #9FE0C6;
+    --signal-deep: #2E8B6A;
+    --mist: #9DB4AE;
+
+    /* Golden ratio — the campus aesthetic's underlying rhythm.
+       Spacing scale: 1rem · φⁿ → 1rem, 1.618rem, 2.618rem, 4.236rem … */
+    --phi: 1.618;
+    --space-phi: calc(1rem * var(--phi));
+  }
+
+  /* Theme accent tokens — consumed by tailwind.config.js `brass` color,
+     so every text-brass / bg-brass / border-brass/40 / text-brass-deep
+     utility re-skins live when data-theme flips.
+     Campus (default, normal days): refined botanical green, not neon.
+     Luxury (Fridays + graduation season): brass. */
+  :root, :root[data-theme='campus'] {
+    --accent: #1B7A4A;
+    --accent-deep: #0F5A34;
+  }
+  :root[data-theme='luxury'] {
+    --accent: #C8A96A;
+    --accent-deep: #A9884B;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--ink);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Display serif for headlines */
+  .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+  }
+  /* Mono for prices, order ids, labels */
+  .font-price {
+    font-family: 'Space Mono', ui-monospace, monospace;
+  }
+
+  /* ---- Hero panel: shared structure, theme-swapped skins ---- */
+  .hero-ink {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-ink::before {
+    content: '';
+    position: absolute;
+    inset: -20%;
+    pointer-events: none;
+  }
+
+  /* Campus skin (default theme): warm porcelain panel with a subtle
+     botanical radial (soft green top-right, ink haze bottom-left),
+     a 1px ink hairline, ink text — and a slower, subtler ken-burns
+     (24s, scale 1.0 → 1.03) so the light drifts rather than sweeps. */
+  /* Default selector uses :not([data-theme='luxury']) rather than bare :root
+     so the campus border/color never leak into the luxury skin (bare :root
+     would match always, and luxury only re-declares background). */
+  :root:not([data-theme='luxury']) .hero-ink,
+  :root[data-theme='campus'] .hero-ink {
+    background:
+      radial-gradient(120% 140% at 85% -10%, rgba(27, 122, 74, 0.08) 0%, transparent 55%),
+      radial-gradient(90% 120% at -10% 110%, rgba(11, 29, 31, 0.05) 0%, transparent 50%),
+      #FBFAF5;
+    border: 1px solid rgba(11, 29, 31, 0.12);
+    color: #0B1D1F;
+  }
+  :root:not([data-theme='luxury']) .hero-ink::before,
+  :root[data-theme='campus'] .hero-ink::before {
+    background:
+      radial-gradient(40% 35% at 70% 30%, rgba(27, 122, 74, 0.10) 0%, transparent 70%),
+      radial-gradient(30% 30% at 20% 80%, rgba(11, 29, 31, 0.05) 0%, transparent 70%);
+    animation: kenburns-soft 24s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns-soft {
+    0%   { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.03) translate(-1%, 1%); }
+  }
+
+  /* Campus hero typography: hero copy is marked up luxury-first with
+     porcelain utilities (incl. `text-porcelain` on the section itself);
+     re-ink it under the campus skin. !important is required because
+     Tailwind's utilities layer beats this components layer. */
+  :root[data-theme='campus'] .hero-ink.text-porcelain,
+  :root[data-theme='campus'] .hero-ink .text-porcelain { color: #0B1D1F !important; }
+  :root[data-theme='campus'] .hero-ink .text-porcelain\/70 { color: rgba(11, 29, 31, 0.65) !important; }
+  :root[data-theme='campus'] .hero-ink .text-porcelain\/60 { color: rgba(11, 29, 31, 0.55) !important; }
+
+  /* Luxury skin (Fridays + graduation season): the original ink panel
+     with brass/royal radial glow and the 18s ken-burns sweep — unchanged. */
+  :root[data-theme='luxury'] .hero-ink {
+    background:
+      radial-gradient(120% 140% at 85% -10%, rgba(200, 169, 106, 0.22) 0%, transparent 55%),
+      radial-gradient(90% 120% at -10% 110%, rgba(109, 32, 119, 0.35) 0%, transparent 50%),
+      linear-gradient(135deg, #0B1D1F 0%, #10292C 55%, #0B1D1F 100%);
+  }
+  :root[data-theme='luxury'] .hero-ink::before {
+    background:
+      radial-gradient(40% 35% at 70% 30%, rgba(159, 224, 198, 0.14) 0%, transparent 70%),
+      radial-gradient(30% 30% at 20% 80%, rgba(200, 169, 106, 0.12) 0%, transparent 70%);
+    animation: kenburns 18s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns {
+    0%   { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.15) translate(-2%, 2%); }
+  }
+
+  /* ---- Ticker marquee ---- */
+  .ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 28s linear infinite;
+  }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ---- Product card hover: lift + accent edge (green campus / brass luxury) ---- */
+  .product-card {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px -18px rgba(11, 29, 31, 0.35);
+    border-color: var(--accent);
+  }
+  .product-card:hover .product-card-img {
+    transform: scale(1.06);
+  }
+  .product-card-img {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* ---- Category chip ---- */
+  .chip {
+    transition: all 0.25s ease;
+  }
+  .chip-active {
+    background: var(--accent-deep) !important;
+    color: var(--porcelain) !important;
+    border-color: var(--ink) !important;
+    box-shadow: 0 8px 20px -8px rgba(11, 29, 31, 0.5);
+  }
+  .chip:not(.chip-active):hover {
+    border-color: var(--accent);
+    color: var(--ink);
+  }
+
+  /* ---- Hairline rules & texture ---- */
+  .hairline {
+    border-color: rgba(11, 29, 31, 0.12);
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(242, 239, 230, 0.05) 1px, transparent 1px);
+    background-size: 4px 4px;
+    pointer-events: none;
+  }
+
+  /* ---- Scrollbars ---- */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* ---- Reveal on load ---- */
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .rise-in {
+    animation: rise-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* ---- Campus page crown: a thin black–green–black hairline fixed to the
+     top edge — black integration, elegant, campus theme only ---- */
+  :root[data-theme='campus'] body::before {
+    content: '';
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0B1D1F, var(--accent), #0B1D1F);
+    z-index: 60;
+    pointer-events: none;
+  }
+}
+
+/* ==========================================================================
+   GOLDEN-RATIO SYSTEM (φ = 1.618) — the campus refinement; both themes benefit.
+   Spacing scale: 1rem · φⁿ → 1rem, 1.618rem (--space-phi), 2.618rem, 4.236rem …
+   Type scale: Fraunces display sizes step by 1.618 (e.g. 18px → 29px → 47px);
+   components own their sizes — these utilities carry the spatial rhythm.
+   .phi-hero: 38.2vh ≈ 1/φ² — the golden section of the viewport, capped.
+   ========================================================================== */
+@layer utilities {
+  .phi-pad { padding: var(--space-phi); }
+  .phi-gap { gap: calc(1rem * var(--phi)); }
+  .phi-hero { min-height: min(38.2vh, 340px); }
+}
