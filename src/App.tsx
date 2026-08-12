@@ -13,6 +13,7 @@ import AdminPage from '@/pages/AdminPage';
 import DriverPage from '@/pages/DriverPage';
 import GameNightPage from '@/pages/GameNightPage';
 import { LoginModal, RegisterModal } from '@/components/AuthModals';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 interface AppContextType {
@@ -499,6 +500,7 @@ const logout = useCallback(async () => {
           </div>
         )}
       </div>
+      <Analytics />
     </AppContext.Provider>
   );
 }
